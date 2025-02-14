@@ -89,22 +89,25 @@ Esta chave compartilhada é usada para gerar um valor de deslocamento para a cif
 ## Exemplo de Saída
 
 ### Cliente:
-pgsql
-Copiar
-Chave privada gerada: 16
-Chave compartilhada gerada: 8
-Input sentence: Olá, Servidor!
-Received from Server (after decryption): OLÁ, SERVIDOR!
-Servidor:
-java
-Copiar
-Servidor TCP
-Chave privada gerada: 7
-Chave compartilhada gerada: 8
-Deslocamento calculado: 8
-Received from Client (encrypted): <mensagem_encriptada>
-Received from Client (decrypted): Olá, Servidor!
-Sent back to Client (encrypted): <resposta_encriptada>
+
+## Resultados de Execução
+
+### pgsql
+
+- **Chave privada gerada:** 16
+- **Chave compartilhada gerada:** 8
+- **Input sentence:** Olá, Servidor!
+- **Received from Server (after decryption):** OLÁ, SERVIDOR!
+
+### Servidor: Java
+
+- **Chave privada gerada:** 7
+- **Chave compartilhada gerada:** 8
+- **Deslocamento calculado:** 8
+- **Received from Client (encrypted):** `<mensagem_encriptada>`
+- **Received from Client (decrypted):** Olá, Servidor!
+- **Sent back to Client (encrypted):** `<resposta_encriptada>`
+
 
 ## Notas
 
