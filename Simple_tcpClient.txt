@@ -42,7 +42,7 @@ def cliente():
     g = 5   # Gerador
 
     # Gerando a chave privada e a chave pública do cliente
-    private_key = random.randint(1, p - 1)
+    private_key = random.randint(1000000, 10000000 - 1)
     print(f"Chave privada gerada: {private_key}")
     
     public_key = pow(g, private_key, p)
