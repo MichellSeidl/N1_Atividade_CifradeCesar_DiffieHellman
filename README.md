@@ -86,28 +86,18 @@ Esta chave compartilhada é usada para gerar um valor de deslocamento para a cif
 3. **Desencriptação da Mensagem:** O servidor desencripta a mensagem recebida do cliente utilizando a chave compartilhada.
 4. **Processamento da Mensagem:** O servidor converte a mensagem recebida para maiúsculas e a criptografa novamente com a cifra de César antes de enviar a resposta ao cliente.
 
-## Exemplo de Saída
+## Tutorial de execução
+1. Abra a pasta do projeto no Visual Studio Code em ambos os computadores.
+2. No arquivo `Simple_tcpServer.txt`, ajuste o endereço de IP conforme necessário.
+3. No computador que será o **servidor**, abra o terminal do VS Code e execute o comando:
+   ```bash
+   py .\Simple_tcpServer.txt
 
-### Cliente:
-
-## Resultados de Execução
-
-### pgsql
-
-- **Chave privada gerada:** 16
-- **Chave compartilhada gerada:** 8
-- **Input sentence:** Olá, Servidor!
-- **Received from Server (after decryption):** OLÁ, SERVIDOR!
-
-### Servidor: Java
-
-- **Chave privada gerada:** 7
-- **Chave compartilhada gerada:** 8
-- **Deslocamento calculado:** 8
-- **Received from Client (encrypted):** `<mensagem_encriptada>`
-- **Received from Client (decrypted):** Olá, Servidor!
-- **Sent back to Client (encrypted):** `<resposta_encriptada>`
-
+4. No computador que será o cliente, abra o terminal do VS Code e execute o comando:
+    ```bash
+   py .\Simple_tcpClient.txt
+5. No computador cliente, digite a frase desejada no terminal.
+6. O resultado será exibido em ambos os terminais (cliente e servidor).
 
 ## Notas
 
